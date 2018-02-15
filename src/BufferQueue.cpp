@@ -19,6 +19,7 @@ BufferQueue::BufferQueue(size_t iSize) {
 
 BufferQueue::~BufferQueue() {
     if (buffer) free(buffer);
+    if (resultBuffer) free(resultBuffer);
 }
 
 bool BufferQueue::enqueue(const void *aBuffer, const size_t aSize) {
